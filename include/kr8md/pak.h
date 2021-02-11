@@ -2,10 +2,10 @@
 
 #include <stddef.h>
 
-#include <krayte/kr8md/bool_types.h>
-#include <krayte/kr8md/defaults.h>
-#include <krayte/kr8md/intrinsic_cast_types.h>
-#include <krayte/kr8md/intrinsic_types.h>
+#include <kr8md/bool_types.h>
+#include <kr8md/defaults.h>
+#include <kr8md/intrinsic_cast_types.h>
+#include <kr8md/intrinsic_types.h>
 
 namespace kr8md
 {

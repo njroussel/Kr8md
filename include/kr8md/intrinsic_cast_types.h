@@ -1,6 +1,6 @@
 #pragma once
 
-#include <krayte/kr8md/intrinsic_types.h>
+#include <kr8md/intrinsic_types.h>
 
 #if defined(__AVX2__) || defined(__SSE4_2__)
 #include <immintrin.h>

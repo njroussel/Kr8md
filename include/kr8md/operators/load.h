@@ -1,6 +1,6 @@
 #pragma once
 
-#include <krayte/kr8md/pak.h>
+#include <kr8md/pak.h>
 
 namespace kr8md
 {

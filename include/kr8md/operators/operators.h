@@ -8,14 +8,13 @@
     instructions that aren't yet implemented.
 */
 
-#include <krayte/kr8md/operators/add.h>
-#include <krayte/kr8md/operators/any.h>
-#include <krayte/kr8md/operators/compare.h>
-#include <krayte/kr8md/operators/construct.h>
-#include <krayte/kr8md/operators/divide.h>
-#include <krayte/kr8md/operators/increment.h>
-#include <krayte/kr8md/operators/load.h>
-#include <krayte/kr8md/operators/multiply.h>
-#include <krayte/kr8md/operators/select.h>
-#include <krayte/kr8md/operators/store.h>
-#include <krayte/kr8md/operators/subtract.h>
+#include <kr8md/operators/add.h>
+#include <kr8md/operators/any.h>
+#include <kr8md/operators/compare.h>
+#include <kr8md/operators/construct.h>
+#include <kr8md/operators/divide.h>
+#include <kr8md/operators/increment.h>
+#include <kr8md/operators/load.h>
+#include <kr8md/operators/multiply.h>
+#include <kr8md/operators/store.h>
+#include <kr8md/operators/subtract.h>

@@ -1,7 +1,7 @@
 #pragma once
 
 #include <iostream>
-#include <krayte/kr8md/kr8md.h>
+#include <kr8md/kr8md.h>
 
 namespace kr8md
 {
