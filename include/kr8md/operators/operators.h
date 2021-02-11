@@ -16,5 +16,6 @@
 #include <kr8md/operators/increment.h>
 #include <kr8md/operators/load.h>
 #include <kr8md/operators/multiply.h>
+#include <kr8md/operators/select.h>
 #include <kr8md/operators/store.h>
 #include <kr8md/operators/subtract.h>
