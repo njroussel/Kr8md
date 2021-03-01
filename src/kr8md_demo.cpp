@@ -5,10 +5,10 @@
 
 using namespace kr8md;
 
-puint32 mandelbrot(pfloat &c_re, pfloat &c_im, unsigned int max_iterations) {
+pint32 mandelbrot(pfloat &c_re, pfloat &c_im, int max_iterations) {
   pfloat z_re = c_re, z_im = c_im;
-  puint32 i{0u};
-  puint32 pmax_iterations{max_iterations};
+  pint32 i{0};
+  pint32 pmax_iterations{max_iterations};
   pbool32 active{i < pmax_iterations};
 
   while (any(active)) {
@@ -24,43 +24,43 @@ puint32 mandelbrot(pfloat &c_re, pfloat &c_im, unsigned int max_iterations) {
     z_re = c_re + new_re;
     z_im = c_im + new_im;
 
-    masked(i, active) = i + puint32{1u};
+    masked(i, active) = i + pint32{1};
     masked(active, active) = i < pmax_iterations;
   }
 
   return i;
 }
 
-void mandelbrot_loop(uint *dst, int width = 1080, int height = 720,
+void mandelbrot_loop(int *dst, int width = 1080, int height = 720,
                      float cxmin = -2, float cxmax = 1, float cymin = -1,
-                     float cymax = 1, unsigned int max_iterations = 256) {
-  float dx = (cxmax - cxmin) / width;
-  float dy = (cymax - cymin) / height;
+                     float cymax = 1, int max_iterations = 256) {
+  float dx = (cxmax - cxmin) / (float)width;
+  float dy = (cymax - cymin) / (float)height;
 
   for (size_t i = 0; i < height; i++) {
-    pfloat y = cymin + i * dy;
+    pfloat y = cymin + (float)i * dy;
 
     for (size_t j = 0; j < width; j += pfloat::width) {
       pfloat pj{(float)j};
       for (size_t p = 1; p < pfloat::width; p++) {
-        pj.data[p] = pj.data[0] + p;
+        pj.data[p] = pj.data[0] + (float)p;
       }
 
       pfloat x = cxmin + pj * dx;
 
-      puint32 result = mandelbrot(x, y, max_iterations);
+      pint32 result = mandelbrot(x, y, max_iterations);
 
-      size_t index = i * width + j;
+      size_t index = i * static_cast<size_t>(width) + j;
       store(&dst[index], result);
     }
   }
 }
 
 int main(void) {
-  size_t width = 1920;
-  size_t height = 1080;
-  size_t size = width * height;
-  uint *pout_mandel = new uint[size];
+  int width = 1920;
+  int height = 1080;
+  int size = width * height;
+  int *pout_mandel = new int[static_cast<unsigned long>(size)];
 
   mandelbrot_loop(pout_mandel, width, height);
   delete[] pout_mandel;

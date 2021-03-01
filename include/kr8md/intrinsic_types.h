@@ -5,7 +5,7 @@
 #endif
 
 namespace kr8md {
-template <typename T, int W>
+template <typename T, size_t W>
 struct no_intrinsic_t {
   using type = T *;
 };
