@@ -25,8 +25,8 @@ include_directories(
     ${CMAKE_CURRENT_SOURCE_DIR}/include
     )
 
-add_executable(kr8md_test
+add_executable(Kr8md_demo
     # Header files
     # Source files
-    src/kr8md_test.cpp
+    src/kr8md_demo.cpp
     )
