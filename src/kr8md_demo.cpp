@@ -60,10 +60,10 @@ int main(void) {
   int width = 1920;
   int height = 1080;
   int size = width * height;
-  int *pout_mandel = new int[static_cast<unsigned long>(size)];
 
-  mandelbrot_loop(pout_mandel, width, height);
-  delete[] pout_mandel;
+  int *out_mandel = new int[static_cast<unsigned long>(size)];
+  mandelbrot_loop(out_mandel, width, height);
+  delete[] out_mandel;
 
   std::cout << "Max kr8md width/lanes (bytes): " << KR8MD_MAX_VEC_REGISTER_SIZE
             << std::endl;
