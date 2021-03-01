@@ -1,6 +1,5 @@
 #include <kr8md/kr8md.h>
 #include <kr8md/std_helpers.h>
-#include <stdint.h>
 
 #include <iostream>
 

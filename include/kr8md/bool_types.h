@@ -1,6 +1,7 @@
 #pragma once
 
 #include <stdint.h>
+
 namespace kr8md {
 struct no_bool_type {};
 

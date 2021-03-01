@@ -1,8 +1,5 @@
 #pragma once
 
-#include <stddef.h>
-#include <stdint.h>
-
 #if defined(__AVX2__) || defined(__SSE4_2__)
 #include <immintrin.h>
 #endif
