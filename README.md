@@ -2,9 +2,13 @@
 
 Header-only SIMD C++ library
 
+## Table of Contents :
 
-# Features
+- [Features](#features)
+- [Demo](#demo)
 
-* Supports SSE4.2 and AVX2
+## Features
 
+- Supports SSE4.2 and AVX2
 
+## Demo

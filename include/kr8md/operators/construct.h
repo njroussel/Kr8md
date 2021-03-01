@@ -6,7 +6,6 @@
 namespace kr8md
 {
 #ifdef __SSE4_2__
-
     template <>
     KR8MD_INLINE puint32_4::Pak(const uint32_t &value) : intrinsic(_mm_set1_epi32(value)){};
 
@@ -18,7 +17,6 @@ namespace kr8md
 #endif
 
 #ifdef __AVX2__
-
     template <>
     KR8MD_INLINE puint32_8::Pak(const uint32_t &value) : intrinsic(_mm256_set1_epi32(value)){};
 
