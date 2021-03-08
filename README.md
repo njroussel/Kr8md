@@ -15,10 +15,17 @@ Header-only SIMD C++ library
 
 ```cpp
 // Declare pa(c)ked types - their width is determinded at compile-time to match
-// the largest possible vector register for the target architecture.
+// the largest possible vector register size for the target architecture.
 pfloat x = ...;
 
 if any(x > 2.0f) {
-  masked(x, x > 2) = x * x; // Use masks to select specific lanes
+  masked(x, x < 3.5f) = x * x; // Use masks to select specific lanes
 }
+
+// Store vectorized outputs to arrays
+float buffer[pfloat::width];
+store(&buffer, x);
 ```
+
+A working implementation of the mandelbrot fractal is implemented in
+[kr8md_demo.cpp](./src/kr8md_demo.cpp).
