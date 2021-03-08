@@ -9,6 +9,10 @@ Header-only SIMD C++ library
 
 ## Features
 
+- Basic arithmetic operators
+- Logic operators
+- Implitcit type conversions
+- Vector size is determined at compile-time
 - Supports SSE4.2 and AVX2
 
 ## Demo
