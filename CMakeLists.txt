@@ -11,7 +11,7 @@ endif()
 message("Build type: ${CMAKE_BUILD_TYPE}")
 
 # Good practices
-set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} -Wshadow=compatible-local")
+set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} -Wshadow-all")
 set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} -fsanitize=address")
 set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} -Wconversion")
 
@@ -25,8 +25,8 @@ include_directories(
     ${CMAKE_CURRENT_SOURCE_DIR}/include
     )
 
-add_executable(kr8md_test
+add_executable(Kr8md_demo
     # Header files
     # Source files
-    src/kr8md_test.cpp
+    src/kr8md_demo.cpp
     )
