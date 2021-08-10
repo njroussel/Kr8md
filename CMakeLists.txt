@@ -26,7 +26,6 @@ include_directories(
     )
 
 add_executable(Kr8md_demo
-    # Header files
     # Source files
     src/kr8md_demo.cpp
     )
